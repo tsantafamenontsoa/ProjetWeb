@@ -22,7 +22,7 @@
 		<ul class="navbar">
 			Le site :
 			<div id="vignette">
-					<a href="https://www.theatresdebourbon.com/index.php">
+					<a href="projet.php">
 						<img class="vignette" src="projet_files/img.jpg" alt="[logo de l'association vers l'accueil du site]" decoding="low" width="30%" height="30%">
 					</a>
 			</div><!-- div vignette-->
