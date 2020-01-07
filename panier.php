@@ -156,7 +156,7 @@
         $csv = array_map('str_getcsv', file($fic));
         print_r($csv);
         $ind_min = 0;
-        $min =
+        
         while($tab=fgetcsv($fic,1024))
         {
 
