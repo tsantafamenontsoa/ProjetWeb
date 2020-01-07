@@ -196,7 +196,7 @@ foreach($list_lieu as $l)
 
 }
 
-if(!empty($_GET['lieu'])){
+if(isset($_GET['lieu'])){
   echo 'Choisir un titre',"\n";
   echo '</select>',"\n";
   echo '<select name="titre">',"\n";
