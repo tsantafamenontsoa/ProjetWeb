@@ -152,7 +152,11 @@
       <div class="decalage">
         <?php
         $ligne = 0; // compteur de ligne
-        $fic = fopen("reservation.csv", "a+");
+        $fic = "reservation.csv";
+        $csv = array_map('str_getcsv', file($fic));
+        print_r($csv);
+        $ind_min = 0;
+        $min =
         while($tab=fgetcsv($fic,1024))
         {
 

@@ -255,7 +255,7 @@ if(isset($_GET['lieu'])){
 
 
     // Affichage de la ligne
-  echo '  <input type="number" name="nombre"></input>';
+  echo '  <input type="number" name="nombre" value=0></input>';
 
 
   echo "<input type='submit' value='Choisir'></form>";
