@@ -169,9 +169,9 @@
         //affichage de chaque champ de la ligne en question
 
         echo '<b>' . $tab[0]." ".$tab[1]. '</b> , ' .$tab[2]. " ". $tab[3]. " " . $tab[5] . "€ " ;
-
-        }
         $total += $tab[5];
+        }
+
         else{
           echo '<b>' . $tab[0]." ".$tab[1]. '</b> , ' .$tab[2]. " ". $tab[3]. " 0€  " ;
         }
