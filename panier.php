@@ -151,35 +151,39 @@
 		<main>
       <div class="decalage">
         <?php
-        $ligne = 0; // compteur de ligne
+        $ligne = 1; // compteur de ligne
         $fic = "reservation.csv";
         $csv = array_map('str_getcsv', file($fic));
         #print_r($csv);
         $ind_min = 0;
+        $total = 0;
 
         foreach($csv as $tab)
         {
-          if($ligne%6==0)
+          echo '<li>';
+          if($ligne%6!=0)
         {
         $champs = count($tab);//nombre de champ dans la ligne en question
-        echo '<li>';
+
 
         //affichage de chaque champ de la ligne en question
 
         echo '<b>' . $tab[0]." ".$tab[1]. '</b> , ' .$tab[2]. " ". $tab[3]. " " . $tab[5] . "€ " ;
 
-
         }
+        $total += $tab[5];
         else{
           echo '<b>' . $tab[0]." ".$tab[1]. '</b> , ' .$tab[2]. " ". $tab[3]. " 0€  " ;
         }
         $ligne ++;
         echo '</li>';
         }
+        echo '<b> Total : </b> '.$total;
 
 
 
 ?>
+
 
 
 </div>
