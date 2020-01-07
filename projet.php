@@ -157,6 +157,7 @@ $page = (!empty($_GET['page']) ? $_GET['page'] : 0);
   $fic = fopen("ResultatsFestival.csv", "a+");
   while($tab=fgetcsv($fic,1024))
   {
+      echo $ligne. $page*15 . $page*15+15 ;
     if($ligne>=$page*15 && $ligne<=$page*15+15 )
     {
       $champs = count($tab);//nombre de champ dans la ligne en question
@@ -171,12 +172,14 @@ $page = (!empty($_GET['page']) ? $_GET['page'] : 0);
   }
   ?>
 
+  <a href="?page=<?php echo $page - 1; ?>">Page précédente</a>
+  —
+  <a href="?page=<?php echo $page + 1; ?>">Page suivante</a>
+
 </div>
 	</main>
 	<footer>
-    <a href="?page=<?php echo $page - 1; ?>">Page précédente</a>
-    —
-    <a href="?page=<?php echo $page + 1; ?>">Page suivante</a>
+
 	index
 <!-- Signer et dater la page, c'est une question de politesse! -->
 <address>Page conçue par Sylvie Delaët, choix éditoriaux Pierre Deusy et Jules Reigneaud,  vendredi 20 décembre 2018</address>
