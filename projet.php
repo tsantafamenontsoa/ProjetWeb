@@ -149,6 +149,8 @@
 		<!--pachtwork-->--&gt;
 
 		<main>
+
+      <div class="decalage">
       <?php
 
       $ligne = 1; // compteur de ligne
@@ -167,7 +169,7 @@
   }
   ?>
 
-
+</div>
 	</main>
 	<footer>
 
