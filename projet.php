@@ -165,13 +165,14 @@ $page = (!empty($_GET['page']) ? intval($_GET['page']) : 0);
     {
       $champs = count($tab);//nombre de champ dans la ligne en question
       echo '<li>';
-      $ligne ++;
+
       //affichage de chaque champ de la ligne en question
 
       echo '<b>' . $tab[0]." à ".$tab[1]. '</b> , ' .$tab[5]. " présente <em>". $tab[2]. "</em> à " . $tab[3] . ", " .$tab[4]. " " ;
 
       echo '</li>';
     }
+    $ligne ++;
   }
   ?>
 
