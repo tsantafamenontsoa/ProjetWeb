@@ -151,7 +151,7 @@
 		<main>
       <div class="decalage">
         <?php
-
+$lieu = (!empty($_GET['lieu']) ? $_GET['lieu'] : "Moulins");
         $list_lieu = array('Moulins' ,
         'Monetay',
         'Vichy',
@@ -171,7 +171,7 @@ $jours = array();
 $horaires = array();
 #foreach($list_lieu as $lieu){
   foreach ($csv as $value) {
-    if($value["Village"] == "Veauce"){
+    if($value["Village"] == $lieu){
       #print_r($value);
       array_push($titres, $value["TitreSpectacle"]);
       array_push($horaires, $value["Heure"]);
@@ -179,9 +179,20 @@ $horaires = array();
   }
 
 }
-print_r($titres);
-print_r($jours);
-print_r($horaires);
+
+
+
+// Parcours du tableau
+echo '<select name="programme">',"\n";
+foreach($list_lieu as $l)
+{
+
+  // Affichage de la ligne
+  echo "\t",'<option>', $l ,'</option>',"\n";
+
+}
+echo '</select>',"\n";
+
 
 ?>
 
