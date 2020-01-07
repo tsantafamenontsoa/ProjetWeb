@@ -154,7 +154,7 @@
         $ligne = 0; // compteur de ligne
         $fic = "reservation.csv";
         $csv = array_map('str_getcsv', file($fic));
-        print_r($csv);
+        #print_r($csv);
         $ind_min = 0;
 
         foreach($csv as $tab)
@@ -166,7 +166,7 @@
 
         //affichage de chaque champ de la ligne en question
 
-        echo '<b>' . $tab[0]." ".$tab[1]. '</b> , ' .$tab[2]. " ". $tab[3]. " " . $tab[5] . "€ "" " ;
+        echo '<b>' . $tab[0]." ".$tab[1]. '</b> , ' .$tab[2]. " ". $tab[3]. " " . $tab[5] . "€ " ;
 
 
         }
