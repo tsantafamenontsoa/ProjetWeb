@@ -156,12 +156,13 @@
   while($tab=fgetcsv($fic,1024))
   {
     $champs = count($tab);//nombre de champ dans la ligne en question
-
+    echo '<li>';
+    $ligne ++;
     //affichage de chaque champ de la ligne en question
     for($i=0; $i<$champs; $i ++)
     {
-      echo '<li>'.$tab[$i] .'</li>'. "
-      ";
+    echo $tab[$i] . '</li>'"
+    ";
     }
   }
   ?>
