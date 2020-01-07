@@ -152,26 +152,31 @@
 
       <div class="decalage">
       <?php
-
+$page = (!empty($_GET['page']) ? $_GET['page'] : 0);
       $ligne = 1; // compteur de ligne
   $fic = fopen("ResultatsFestival.csv", "a+");
   while($tab=fgetcsv($fic,1024))
   {
-    $champs = count($tab);//nombre de champ dans la ligne en question
-    echo '<li>';
-    $ligne ++;
-    //affichage de chaque champ de la ligne en question
+    if($ligne>=$page*15 && $ligne<=$page*15*2 )
+    {
+      $champs = count($tab);//nombre de champ dans la ligne en question
+      echo '<li>';
+      $ligne ++;
+      //affichage de chaque champ de la ligne en question
 
-    echo '<b>' . $tab[0]." à ".$tab[1]. '</b> , ' .$tab[5]. " présente <em>". $tab[2]. "</em> à " . $tab[3] . ", " .$tab[4]. " " ;
+      echo '<b>' . $tab[0]." à ".$tab[1]. '</b> , ' .$tab[5]. " présente <em>". $tab[2]. "</em> à " . $tab[3] . ", " .$tab[4]. " " ;
 
-    echo '</li>';
+      echo '</li>';
+    }
   }
   ?>
 
 </div>
 	</main>
 	<footer>
-
+    <a href="?page=<?php echo $page - 1; ?>">Page précédente</a>
+    —
+    <a href="?page=<?php echo $page + 1; ?>">Page suivante</a>
 	index
 <!-- Signer et dater la page, c'est une question de politesse! -->
 <address>Page conçue par Sylvie Delaët, choix éditoriaux Pierre Deusy et Jules Reigneaud,  vendredi 20 décembre 2018</address>
