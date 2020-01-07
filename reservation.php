@@ -151,11 +151,14 @@
 		<main>
       <div class="decalage">
         <?php
-        $file = "ResultatsFestival.csv";
-        $csv= file_get_contents($file);
-        $array = array_map("str_getcsv", explode("\n", $csv));
-        $json = json_encode($array);
-        print_r($json);
+
+        list_lieu = ['Moulins' ,
+        'Monetay',
+        'Vichy',
+        'Monteignet',
+        'Veauce',
+        'Clermont-Ferrand'
+]
         ?>
 
 
@@ -166,7 +169,7 @@
 
 	index
 <!-- Signer et dater la page, c'est une question de politesse! -->
-<address>Page conçue par Sylvie Delaët, choix éditoriaux Pierre Deusy et Jules Reigneaud,  vendredi 20 décembre 2018</address>
+
 	</footer>
 
 </body></html>
