@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<table>
+    <thead>
+        <tr>
+            <td>emploi du temps<td>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>The table body</td>
+            <td>with two columns</td>
+        </tr>
+    </tbody>
+</table>
+</html>
