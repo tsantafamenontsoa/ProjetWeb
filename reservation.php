@@ -172,10 +172,10 @@ $horaires = array();
 #foreach($list_lieu as $lieu){
   foreach ($csv as $value) {
     if($value["Village"] == "Veauce"){
-      print_r($value);
+      #print_r($value);
       array_push($titres, $value["TitreSpectacle"]);
       array_push($horaires, $value["Heure"]);
-      #array_push($jours, $value["jour"]);
+      array_push($jours, $value["jour"]);
   }
   print_r($titres);
   print_r($jours);
