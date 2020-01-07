@@ -165,7 +165,7 @@ $csv = array_map('str_getcsv', file($file));
    $a = array_combine($csv[0], $a);
  });
  array_shift($csv); # remove column header
-echo $csv;
+print_r($csv);
         ?>
 
 
