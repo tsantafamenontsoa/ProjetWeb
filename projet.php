@@ -152,7 +152,7 @@
 
       <div class="decalage">
       <?php
-$page = (!empty($_GET['page']) ? $_GET['page'] : 0);
+$page = (!empty($_GET['page']) ? (int)$_GET['page'] : 0);
       $ligne = 0; // compteur de ligne
   $fic = fopen("ResultatsFestival.csv", "a+");
   while($tab=fgetcsv($fic,1024))
