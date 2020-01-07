@@ -181,7 +181,7 @@ $horaires = array();
 }
 
 
-echo "form action='reservation.php' method='get'>"
+echo "form action='reservation.php' method='get'>";
 
 
 
@@ -195,7 +195,7 @@ foreach($list_lieu as $l)
 
 }
 echo '</select>',"\n";
-echo "<input type='submit' value='Choisir'></form>"
+echo "<input type='submit' value='Choisir'></form>";
 
 ?>
 
