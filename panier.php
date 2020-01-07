@@ -156,25 +156,25 @@
         $csv = array_map('str_getcsv', file($fic));
         print_r($csv);
         $ind_min = 0;
-        
-        while($tab=fgetcsv($fic,1024))
-        {
 
-         $inf = $page*15;
-         $sup = $page*15+15 ;
-         #echo "ligne " .$ligne. "page". $inf."page". $sup ;
-        if($ligne>=$inf && $ligne<$sup )
+        foreach($csv as $tab)
+        {
+          if($ligne%6==0)
         {
         $champs = count($tab);//nombre de champ dans la ligne en question
         echo '<li>';
 
         //affichage de chaque champ de la ligne en question
 
-        echo '<b>' . $tab[0]." à ".$tab[1]. '</b> , ' .$tab[5]. " présente <em>". $tab[2]. "</em> à " . $tab[3] . ", " .$tab[4]. " " ;
+        echo '<b>' . $tab[0]." ".$tab[1]. '</b> , ' .$tab[2]. " ". $tab[3]. " " . $tab[5] . "€ "" " ;
 
-        echo '</li>';
+
+        }
+        else{
+          echo '<b>' . $tab[0]." ".$tab[1]. '</b> , ' .$tab[2]. " ". $tab[3]. " 0€  " ;
         }
         $ligne ++;
+        echo '</li>';
         }
 
 
