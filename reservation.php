@@ -166,9 +166,9 @@ $csv = array_map('str_getcsv', file($file));
  });
  array_shift($csv); # remove column header
 #print_r($csv);
-$titres = array_unique();
-$jours = array_unique();
-$horaires = array_unique();
+$titres = array();
+$jours = array();
+$horaires = array();
 #foreach($list_lieu as $lieu){
   foreach ($csv as $value) {
     if($value["Village"] == $lieu){
@@ -203,7 +203,7 @@ if(isset($_GET['lieu'])){
   echo 'Choisir un titre',"\n";
   echo '</select>',"\n";
   echo '<select name="titre">',"\n";
-  foreach($titres as $titre)
+  foreach(array_unique($titres) as $titre)
   {
 
     // Affichage de la ligne
@@ -213,7 +213,7 @@ if(isset($_GET['lieu'])){
   echo '</select>',"\n";
   echo 'Choisir une date',"\n";
   echo '<select name="date">',"\n";
-  foreach($jours as $jour)
+  foreach(array_unique($jours) as $jour)
   {
 
     // Affichage de la ligne
@@ -223,7 +223,7 @@ if(isset($_GET['lieu'])){
   echo '</select>',"\n";
   echo 'Choisir un horaire',"\n";
   echo '<select name="horaire">',"\n";
-  foreach($horaires as $horaire)
+  foreach(array_unique($horaires) as $horaire)
   {
 
     // Affichage de la ligne
