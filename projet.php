@@ -152,6 +152,9 @@
 		<main>
 <canvas id="canvas_main">
       <div class="decalage">
+
+
+        Pourquoiiiiiiiiii
       <?php
 $page = (!empty($_GET['page']) ? intval($_GET['page']) : 0);
       $ligne = 0; // compteur de ligne
