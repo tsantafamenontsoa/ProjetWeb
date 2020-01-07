@@ -161,10 +161,9 @@
     echo '<li>';
     $ligne ++;
     //affichage de chaque champ de la ligne en question
-    for($i=0; $i<$champs; $i ++)
-    {
-    echo $tab[$i] . " " ;
-    }
+
+    echo $tab[0]." à ".$tab[1].", " .$tab[5]. " présente ". $tab[2]. " à " . $tab[3] . $tab[4]. " " ;
+
     echo '</li>';
   }
   ?>
