@@ -149,7 +149,6 @@
 		<!--pachtwork-->--&gt;
 
 		<main>
-<canvas id="canvas_main">
       <div class="decalage">
         <?php
         $file = "ResultatsFestival.csv";
@@ -162,7 +161,6 @@
 
 
 </div>
-</canvas>
 	</main>
 	<footer>
 
