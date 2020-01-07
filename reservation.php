@@ -152,13 +152,13 @@
       <div class="decalage">
         <?php
 
-        list_lieu = ['Moulins' ,
+        list_lieu = array(['Moulins' ,
         'Monetay',
         'Vichy',
         'Monteignet',
         'Veauce',
         'Clermont-Ferrand'
-]
+]);
         ?>
 
 
