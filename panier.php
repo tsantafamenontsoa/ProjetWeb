@@ -151,116 +151,27 @@
 		<main>
       <div class="decalage">
         <?php
-$lieu = (!empty($_GET['lieu']) ? $_GET['lieu'] : "Moulins");
-        $list_lieu = array('Moulins' ,
-        'Monétay',
-        'Vichy',
-        'Monteignet',
-        'Veauce',
-        'Clermont-Ferrand'
-);
-$file = "ResultatsFestival.csv";
-$csv = array_map('str_getcsv', file($file));
- array_walk($csv, function(&$a) use ($csv) {
-   $a = array_combine($csv[0], $a);
- });
- array_shift($csv); # remove column header
-#print_r($csv);
-$titres = array();
-$jours = array();
-$horaires = array();
-#foreach($list_lieu as $lieu){
-  foreach ($csv as $value) {
-    if($value["Village"] == $lieu){
-      #print_r($value);
-      array_push($titres, $value["TitreSpectacle"]);
-      array_push($horaires, $value["Heure"]);
-      array_push($jours, $value["Jour"]);
-  }
+        $ligne = 0; // compteur de ligne
+        $fic = fopen("reservation.csv", "a+");
+        while($tab=fgetcsv($fic,1024))
+        {
 
-}
+         $inf = $page*15;
+         $sup = $page*15+15 ;
+         #echo "ligne " .$ligne. "page". $inf."page". $sup ;
+        if($ligne>=$inf && $ligne<$sup )
+        {
+        $champs = count($tab);//nombre de champ dans la ligne en question
+        echo '<li>';
 
+        //affichage de chaque champ de la ligne en question
 
+        echo '<b>' . $tab[0]." à ".$tab[1]. '</b> , ' .$tab[5]. " présente <em>". $tab[2]. "</em> à " . $tab[3] . ", " .$tab[4]. " " ;
 
-
-
-// Parcours du tableau
-if(!isset($_GET['lieu'])){
-  echo "<form action='reservation.php' method='get'>";
-  echo 'Choisir un lieu',"\n";
-  echo '<select name="lieu">',"\n";
-  foreach($list_lieu as $l)
-  {
-
-    // Affichage de la ligne
-    echo "\t",'<option>', $l ,'</option>',"\n";
-
-  }
-  echo "<input type='submit' value='Choisir'></form>";
-}
-
-if(isset($_GET['lieu'])){
-  echo "<form action='reserver.php' method='get'>";
-
-  echo 'Lieu <b>',$lieu, "</b> \n";
-  echo '<select name="lieu">',"\n";
-  echo "\t",'<option>', $lieu ,'</option>',"\n";
-  echo '</select>',"\n";
-
-  echo 'Choisir un titre',"\n";
-  echo '</select>',"\n";
-  echo '<select name="titre">',"\n";
-  foreach(array_unique($titres) as $titre)
-  {
-
-    // Affichage de la ligne
-    echo "\t",'<option>', $titre ,'</option>',"\n";
-
-  }
-  echo '</select>',"\n";
-  echo 'Choisir une date',"\n";
-  echo '<select name="jour">',"\n";
-  foreach(array_unique($jours) as $jour)
-  {
-
-    // Affichage de la ligne
-    echo "\t",'<option>', $jour ,'</option>',"\n";
-
-  }
-  echo '</select>',"\n";
-
-  echo 'Choisir un horaire',"\n";
-  echo '<select name="horaire">',"\n";
-  foreach(array_unique($horaires) as $horaire)
-  {
-
-    // Affichage de la ligne
-    echo "\t",'<option>', $horaire ,'</option>',"\n";
-
-  }
-  echo '</select>',"\n";
-
-  echo 'Choisir un tarif',"\n";
-  echo '<select name="tarif">',"\n";
-
-
-    // Affichage de la ligne
-    echo "\t",'<option>', "Plein tarif" ,'</option>',"\n";
-    echo "\t",'<option>', "Tarif réduit" ,'</option>',"\n";
-    echo "\t",'<option>', "Enfant - Gratuit" ,'</option>',"\n";
-
-  echo '</select>',"\n";
-
-  echo 'Nombre à acheter',"\n";
-
-
-    // Affichage de la ligne
-  echo '  <input type="number" name="nombre"></input>';
-
-
-  echo "<input type='submit' value='Choisir'></form>";
-}
-
+        echo '</li>';
+        }
+        $ligne ++;
+        }
 
 
 
