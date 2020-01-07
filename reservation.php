@@ -166,9 +166,9 @@ $csv = array_map('str_getcsv', file($file));
  });
  array_shift($csv); # remove column header
 #print_r($csv);
-$titres = array();
-$jours = array();
-$horaires = array();
+$titres = array_unique();
+$jours = array_unique();
+$horaires = array_unique();
 #foreach($list_lieu as $lieu){
   foreach ($csv as $value) {
     if($value["Village"] == $lieu){
