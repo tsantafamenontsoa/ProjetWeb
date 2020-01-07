@@ -157,7 +157,7 @@ $page = (!empty($_GET['page']) ? $_GET['page'] : 0);
   $fic = fopen("ResultatsFestival.csv", "a+");
   while($tab=fgetcsv($fic,1024))
   {
-    if($ligne>=$page*15 && $ligne<=$page*15*2 )
+    if($ligne>=$page*15 && $ligne<=($page+1)*15*2 )
     {
       $champs = count($tab);//nombre de champ dans la ligne en question
       echo '<li>';
