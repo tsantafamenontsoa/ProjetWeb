@@ -161,8 +161,9 @@
     //affichage de chaque champ de la ligne en question
     for($i=0; $i<$champs; $i ++)
     {
-    echo $tab[$i] . '</li>';
+    echo $tab[$i] . " " ;
     }
+    echo '</li>';
   }
   ?>
 
