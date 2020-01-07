@@ -160,7 +160,7 @@ $page = (!empty($_GET['page']) ? intval($_GET['page']) : 0);
 
        $inf = $page*15;
        $sup = $page*15+15 ;
-       echo "ligne " .$ligne. "page". $inf."page". $sup ;
+       #echo "ligne " .$ligne. "page". $inf."page". $sup ;
     if($ligne>=$inf && $ligne<=$sup )
     {
       $champs = count($tab);//nombre de champ dans la ligne en question
@@ -174,12 +174,13 @@ $page = (!empty($_GET['page']) ? intval($_GET['page']) : 0);
     }
     $ligne ++;
   }
-  ?>
 
-  <a href="?page=<?php echo $page - 1; ?>">Page précédente</a>
-  —
-  <a href="?page=<?php echo $page + 1; ?>">Page suivante</a>
+if($page>0)
+  echo '<a href="?page=<?php echo $page - 1; ?>">Page précédente</a> --' ;
 
+    if($page<3)
+echo '  <a href="?page=<?php echo $page + 1; ?>">Page suivante</a> ' ;
+?>
 </div>
 	</main>
 	<footer>
