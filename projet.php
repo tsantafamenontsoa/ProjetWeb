@@ -153,7 +153,7 @@
 
       $ligne = 1; // compteur de ligne
   $fic = fopen("ResultatsFestival.csv", "a+");
-  while($tab=fgetcsv($fic,1024,';'))
+  while($tab=fgetcsv($fic,1024))
   {
   $champs = count($tab);//nombre de champ dans la ligne en question
   echo " Les " . $champs . " champs de la ligne " . $ligne . " sont :
