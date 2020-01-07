@@ -177,9 +177,9 @@ $horaires = array();
       array_push($horaires, $value["Heure"]);
       #array_push($jours, $value["jour"]);
   }
-  printr($titres);
-  printr($jours);
-  printr($horaires);
+  print_r($titres);
+  print_r($jours);
+  print_r($horaires);
 }
 
 
