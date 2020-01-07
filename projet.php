@@ -175,11 +175,14 @@ $page = (!empty($_GET['page']) ? intval($_GET['page']) : 0);
     $ligne ++;
   }
 
-if($page>0)
-  echo '<a href="?page='. $page - 1. '">Page précédente</a> --' ;
 
-    if($page<3)
-echo '  <a href="?page='. $page + 1. '">Page suivante</a> ' ;
+
+  if($page>0)
+    echo '<a href="?page='. $page - 1. '\">Page précédente</a> --' ;
+
+      if($page<3)
+  echo '  <a href="?page='. $page + 1. '\">Page suivante</a> ' ;
+
 ?>
 </div>
 	</main>
