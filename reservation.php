@@ -166,10 +166,21 @@ $csv = array_map('str_getcsv', file($file));
  });
  array_shift($csv); # remove column header
 #print_r($csv);
-foreach ($csv as $value) {
-  if($value["Village"] == "Veauce")
-    echo $value["TitreSpectacle"];
+$titres = array();
+$jours = array();
+$horaires = array();
+#foreach($list_lieu as $lieu){
+  foreach ($csv as $value) {
+    if($value["Village"] == "Veauce"){
+      array_push($titres, $value["TitreSpectacle"]);
+      array_push($horaires, $value["Heure"]);
+      array_push($jours, $value["jour"]);
+  }
+  printr($titres);
+  printr($jours);
+  printr($horaires);
 }
+
 
 ?>
 
