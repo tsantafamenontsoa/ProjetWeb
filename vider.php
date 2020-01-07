@@ -1,4 +1,4 @@
-<? python_NLP
+<?php
 $monfichier = fopen('reservation.csv', 'w');
 require "projet.php";
 
