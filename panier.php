@@ -178,7 +178,8 @@
         $ligne ++;
         echo '</li>';
         }
-        echo '<b> Total : </b> '.$total;
+
+        echo '</br></br><b> Total : </b> '.$total . " €";
 
 
 
