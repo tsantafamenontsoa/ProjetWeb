@@ -177,7 +177,7 @@ $page = (!empty($_GET['page']) ? intval($_GET['page']) : 0);
 
   if($page>0)
 
-  echo '<a href="?page='.intval($page)-1.'">Page précédente</a> --' ;
+  echo "<a href='?page=".intval($page)-1."'>Page précédente</a> --" ;
 
       if($page<3)
 
