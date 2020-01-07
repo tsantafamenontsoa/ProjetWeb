@@ -181,7 +181,7 @@ $horaires = array();
 }
 
 
-echo "<form action='reservation.php' method='get'>";
+echo "<form action='reserver.php' method='get'>";
 
 
 
