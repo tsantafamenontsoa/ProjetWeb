@@ -161,7 +161,7 @@ $page = (!empty($_GET['page']) ? intval($_GET['page']) : 0);
        $inf = $page*15;
        $sup = $page*15+15 ;
        #echo "ligne " .$ligne. "page". $inf."page". $sup ;
-    if($ligne>=$inf && $ligne<=$sup )
+    if($ligne>=$inf && $ligne<$sup )
     {
       $champs = count($tab);//nombre de champ dans la ligne en question
       echo '<li>';
