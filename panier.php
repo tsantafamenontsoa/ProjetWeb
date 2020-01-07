@@ -33,6 +33,7 @@
 			-->
 			<li><a href="https://www.theatresdebourbon.com/Festival2019Tarifs.php">Tarifs</a> </li>
       <li><a href="reservation.php">Reserver</a> </li>
+      <li><a href="vider.php">Vider le panier</a> </li>
 			<!--<li><a href="Festival2018ProgrammationVueGlobale.php">Planning</a> </li>-->
 		</ul>
 
