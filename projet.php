@@ -152,12 +152,12 @@
 
       <div class="decalage">
       <?php
-$page = (!empty($_GET['page']) ? (int)$_GET['page'] : 0);
+$page = (!empty($_GET['page']) ? intval($_GET['page']) : 0);
       $ligne = 0; // compteur de ligne
   $fic = fopen("ResultatsFestival.csv", "a+");
   while($tab=fgetcsv($fic,1024))
   {
-      echo "ligne " .$ligne. "page". (int)$page*15 ."page". (int)$page*15+15 ;
+       #echo "ligne " .$ligne. "page". (int)$page*15 ."page". (int)$page*15+15 ;
     if($ligne>=$page*15 && $ligne<=$page*15+15 )
     {
       $champs = count($tab);//nombre de champ dans la ligne en question
