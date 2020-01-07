@@ -11,7 +11,7 @@
   $tar = array("Plein tarif"=> 15, "Tarif réduit"=>10, "Enfant - Gratuit" =>0);
   for ($i=0;$i<$nbr;$i++){
     fwrite($monfichier,$l. ',' .$t .','. $j.',' .  $h. ','.$tarif. ','.$tar[$tarif]);
-    fwrite("\n");
+    fwrite($monfichier,"\n");
   }
   fclose($monfichier);
   require "projet.php";
