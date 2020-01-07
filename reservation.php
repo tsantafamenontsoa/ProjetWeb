@@ -181,12 +181,12 @@ $horaires = array();
 }
 
 
-echo "<form action='reserver.php' method='get'>";
 
 
 
 // Parcours du tableau
 if(!isset($_GET['lieu'])){
+  echo "<form action='reservation.php' method='get'>";
   echo 'Choisir un lieu',"\n";
   echo '<select name="lieu">',"\n";
   foreach($list_lieu as $l)
@@ -196,9 +196,12 @@ if(!isset($_GET['lieu'])){
     echo "\t",'<option>', $l ,'</option>',"\n";
 
   }
+  echo "<input type='submit' value='Choisir'></form>";
 }
 
 if(isset($_GET['lieu'])){
+  echo "<form action='reserver.php' method='get'>";
+
   echo 'Lieu <b>',$lieu, "</b> \n";
   echo 'Choisir un titre',"\n";
   echo '</select>',"\n";
@@ -232,10 +235,10 @@ if(isset($_GET['lieu'])){
   }
   echo '</select>',"\n";
 
+  echo "<input type='submit' value='Choisir'></form>";
 }
 
 
-echo "<input type='submit' value='Choisir'></form>";
 
 ?>
 
