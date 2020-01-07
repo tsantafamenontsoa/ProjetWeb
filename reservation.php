@@ -186,17 +186,20 @@ echo "<form action='reservation.php' method='get'>";
 
 
 // Parcours du tableau
-echo 'Choisir un lieu',"\n";
-echo '<select name="lieu">',"\n";
-foreach($list_lieu as $l)
-{
+if(!isset($_GET['lieu'])){
+  echo 'Choisir un lieu',"\n";
+  echo '<select name="lieu">',"\n";
+  foreach($list_lieu as $l)
+  {
 
-  // Affichage de la ligne
-  echo "\t",'<option>', $l ,'</option>',"\n";
+    // Affichage de la ligne
+    echo "\t",'<option>', $l ,'</option>',"\n";
 
+  }
 }
 
 if(isset($_GET['lieu'])){
+  echo 'Lieu',$lieu, "\n";
   echo 'Choisir un titre',"\n";
   echo '</select>',"\n";
   echo '<select name="titre">',"\n";
