@@ -32,7 +32,7 @@
 			<li><a href="https://www.theatresdebourbon.com/Festival2018ProgrammationParSpectacle.php">Spectacles</a></li>
 			-->
 			<li><a href="https://www.theatresdebourbon.com/Festival2019Tarifs.php">Tarifs</a> </li>
-      <li><a href="reservation.php">Reserver</a></li>
+      <li><a href="">Reserver</a></li>
 			<!--<li><a href="Festival2018ProgrammationVueGlobale.php">Planning</a> </li>-->
 		</ul>
 
