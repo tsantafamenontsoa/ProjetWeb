@@ -203,6 +203,10 @@ if(isset($_GET['lieu'])){
   echo "<form action='reserver.php' method='get'>";
 
   echo 'Lieu <b>',$lieu, "</b> \n";
+  echo '<select name="lieu">',"\n";
+  echo "\t",'<option>', $lieu ,'</option>',"\n";
+  echo '</select>',"\n";
+
   echo 'Choisir un titre',"\n";
   echo '</select>',"\n";
   echo '<select name="titre">',"\n";
@@ -215,7 +219,7 @@ if(isset($_GET['lieu'])){
   }
   echo '</select>',"\n";
   echo 'Choisir une date',"\n";
-  echo '<select name="date">',"\n";
+  echo '<select name="jour">',"\n";
   foreach(array_unique($jours) as $jour)
   {
 
