@@ -228,6 +228,7 @@ if(isset($_GET['lieu'])){
 
   }
   echo '</select>',"\n";
+
   echo 'Choisir un horaire',"\n";
   echo '<select name="horaire">',"\n";
   foreach(array_unique($horaires) as $horaire)
@@ -238,6 +239,24 @@ if(isset($_GET['lieu'])){
 
   }
   echo '</select>',"\n";
+
+  echo 'Choisir un tarif',"\n";
+  echo '<select name="tarif">',"\n";
+
+
+    // Affichage de la ligne
+    echo "\t",'<option>', "Plein tarif" ,'</option>',"\n";
+    echo "\t",'<option>', "Tarif réduit" ,'</option>',"\n";
+    echo "\t",'<option>', "Enfant - Gratuit" ,'</option>',"\n";
+
+  echo '</select>',"\n";
+
+  echo 'Nombre à acheter',"\n";
+
+
+    // Affichage de la ligne
+    <input type="number" name="nombre"></input>
+
 
   echo "<input type='submit' value='Choisir'></form>";
 }
