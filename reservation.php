@@ -11,7 +11,7 @@
       <body >
 		<div class="bandeau">
 			 <div class="petitPanier">
-									Panier <table></table></div><!-- class="petitPanier"-->
+									<a href="panier.php">Panier</a> <table></table></div><!-- class="petitPanier"-->
 										<h1> Festival Théâtres de Bourbon</h1>
 		</div><!--class="bandeau"-->
 
@@ -265,7 +265,7 @@ if(isset($_GET['lieu'])){
 
 
 ?>
-
+<a href="reservation.php">Retour</a>
 
 
 </div>
