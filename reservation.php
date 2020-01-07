@@ -8,7 +8,7 @@
 
 
 	 <!-- Corps de la page-->
-      <body onload="init()">
+      <body>
 		<div class="bandeau">
 			 <div class="petitPanier">
 									Attention! à Moulins le début du spectacle à 20h00. <table></table></div><!-- class="petitPanier"-->
