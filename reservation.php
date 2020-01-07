@@ -207,7 +207,6 @@ foreach($titres as $titre)
 }
 echo '</select>',"\n";
 echo 'Choisir une date',"\n";
-echo '</select>',"\n";
 echo '<select name="date">',"\n";
 foreach($jours as $jour)
 {
@@ -218,7 +217,6 @@ foreach($jours as $jour)
 }
 echo '</select>',"\n";
 echo 'Choisir un horaire',"\n";
-echo '</select>',"\n";
 echo '<select name="horaire">',"\n";
 foreach($horaires as $horaire)
 {
