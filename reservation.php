@@ -181,9 +181,12 @@ $horaires = array();
 }
 
 
+echo "form action='reservation.php' method='get'>"
+
+
 
 // Parcours du tableau
-echo '<select name="programme">',"\n";
+echo '<select name="lieu">',"\n";
 foreach($list_lieu as $l)
 {
 
@@ -192,7 +195,7 @@ foreach($list_lieu as $l)
 
 }
 echo '</select>',"\n";
-
+echo "<input type='submit' value='Choisir'></form>"
 
 ?>
 
