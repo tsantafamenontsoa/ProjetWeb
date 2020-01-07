@@ -199,7 +199,7 @@ if(!isset($_GET['lieu'])){
 }
 
 if(isset($_GET['lieu'])){
-  echo 'Lieu',$lieu, "\n";
+  echo 'Lieu <b>',$lieu, "</b> \n";
   echo 'Choisir un titre',"\n";
   echo '</select>',"\n";
   echo '<select name="titre">',"\n";
