@@ -162,7 +162,7 @@
     $ligne ++;
     //affichage de chaque champ de la ligne en question
 
-    echo '<b>' . $tab[0]." à ".$tab[1]. '</b> , ' .$tab[5]. " présente <sup>". $tab[2]. "</sup> à " . $tab[3] . ", " .$tab[4]. " " ;
+    echo '<b>' . $tab[0]." à ".$tab[1]. '</b> , ' .$tab[5]. " présente <em>". $tab[2]. "</em> à " . $tab[3] . ", " .$tab[4]. " " ;
 
     echo '</li>';
   }
