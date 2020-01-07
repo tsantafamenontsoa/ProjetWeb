@@ -166,8 +166,8 @@ $csv = array_map('str_getcsv', file($file));
  });
  array_shift($csv); # remove column header
 #print_r($csv);
-foreach ($csv as $key => $value) {
-  echo "{$key} => {$value} ";
+foreach ($csv as $value) {
+  print_r($value);
 }
 
 ?>
