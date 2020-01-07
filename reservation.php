@@ -32,7 +32,6 @@
 			<li><a href="https://www.theatresdebourbon.com/Festival2018ProgrammationParSpectacle.php">Spectacles</a></li>
 			-->
 			<li><a href="https://www.theatresdebourbon.com/Festival2019Tarifs.php">Tarifs</a> </li>
-      <li><a href="reservation.php">Reserver</a></li>
 			<!--<li><a href="Festival2018ProgrammationVueGlobale.php">Planning</a> </li>-->
 		</ul>
 
@@ -152,35 +151,13 @@
 		<main>
 <canvas id="canvas_main">
       <div class="decalage">
-      <?php
-$page = (!empty($_GET['page']) ? intval($_GET['page']) : 0);
-      $ligne = 0; // compteur de ligne
-  $fic = fopen("ResultatsFestival.csv", "a+");
-  while($tab=fgetcsv($fic,1024))
-  {
-
-       $inf = $page*15;
-       $sup = $page*15+15 ;
-       #echo "ligne " .$ligne. "page". $inf."page". $sup ;
-    if($ligne>=$inf && $ligne<$sup )
-    {
-      $champs = count($tab);//nombre de champ dans la ligne en question
-      echo '<li>';
-
-      //affichage de chaque champ de la ligne en question
-
-      echo '<b>' . $tab[0]." à ".$tab[1]. '</b> , ' .$tab[5]. " présente <em>". $tab[2]. "</em> à " . $tab[3] . ", " .$tab[4]. " " ;
-
-      echo '</li>';
-    }
-    $ligne ++;
-  }
-?>
-
-  <a href="?page=<?php echo $page - 1; ?>">Page précédente</a>
-  —
-  <a href="?page=<?php echo $page + 1; ?>">Page suivante</a>
-
+        <?php
+        $file = "ResultatsFestival.csv";
+        $csv= file_get_contents($file);
+        $array = array_map("str_getcsv", explode("\n", $csv));
+        $json = json_encode($array);
+        print_r($json);
+        ?>
 
 
 

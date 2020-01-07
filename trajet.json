@@ -1,0 +1,55 @@
+{'Moulins':
+{
+'Moulins' : 0,
+'Monetay': 30,
+'Vichy': 70,
+'Monteignet':65,
+'Veauce':68,
+'Clermont-Ferrand':97
+},
+'Monetay':
+{
+'Moulins' : 30,
+'Monetay': 0,
+'Vichy': 45,
+'Monteignet':36,
+'Veauce':42,
+'Clermont-Ferrand':80
+},
+'Vichy':
+{
+'Moulins' : 70,
+'Monetay': 45,
+'Vichy': 0,
+'Monteignet':26,
+'Veauce':58,
+'Clermont-Ferrand':65
+},
+'Monteignet':
+{
+'Moulins' : 65,
+'Monetay': 36,
+'Vichy': 26,
+'Monteignet':0,
+'Veauce':26,
+'Clermont-Ferrand':55
+},
+'Veauce':
+{
+'Moulins' : 68,
+'Monetay': 42,
+'Vichy': 58,
+'Monteignet':26,
+'Veauce':0,
+'Clermont-Ferrand':45
+},
+'Clermont-Ferrand':
+{
+'Moulins' : 97,
+'Monetay': 80,
+'Vichy': 65,
+'Monteignet':55,
+'Veauce':45,
+'Clermont-Ferrand':0
+}
+}
