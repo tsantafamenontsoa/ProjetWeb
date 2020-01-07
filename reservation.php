@@ -154,9 +154,9 @@
         <?php
 $lieu = (!empty($_GET['lieu']) ? $_GET['lieu'] : "Moulins");
         $list_lieu = array('Moulins' ,
-        'Monétay',
+        'Monétay sur Allier',
         'Vichy',
-        'Monteignet',
+        'Monteignet sur l\'Andelot',
         'Veauce',
         'Clermont-Ferrand'
 );
