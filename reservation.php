@@ -195,37 +195,42 @@ foreach($list_lieu as $l)
   echo "\t",'<option>', $l ,'</option>',"\n";
 
 }
-echo 'Choisir un titre',"\n";
-echo '</select>',"\n";
-echo '<select name="titre">',"\n";
-foreach($titres as $titre)
-{
 
-  // Affichage de la ligne
-  echo "\t",'<option>', $titre ,'</option>',"\n";
+if(!empty($_GET['lieu'])){
+  echo 'Choisir un titre',"\n";
+  echo '</select>',"\n";
+  echo '<select name="titre">',"\n";
+  foreach($titres as $titre)
+  {
+
+    // Affichage de la ligne
+    echo "\t",'<option>', $titre ,'</option>',"\n";
+
+  }
+  echo '</select>',"\n";
+  echo 'Choisir une date',"\n";
+  echo '<select name="date">',"\n";
+  foreach($jours as $jour)
+  {
+
+    // Affichage de la ligne
+    echo "\t",'<option>', $jour ,'</option>',"\n";
+
+  }
+  echo '</select>',"\n";
+  echo 'Choisir un horaire',"\n";
+  echo '<select name="horaire">',"\n";
+  foreach($horaires as $horaire)
+  {
+
+    // Affichage de la ligne
+    echo "\t",'<option>', $horaire ,'</option>',"\n";
+
+  }
+  echo '</select>',"\n";
 
 }
-echo '</select>',"\n";
-echo 'Choisir une date',"\n";
-echo '<select name="date">',"\n";
-foreach($jours as $jour)
-{
 
-  // Affichage de la ligne
-  echo "\t",'<option>', $jour ,'</option>',"\n";
-
-}
-echo '</select>',"\n";
-echo 'Choisir un horaire',"\n";
-echo '<select name="horaire">',"\n";
-foreach($horaires as $horaire)
-{
-
-  // Affichage de la ligne
-  echo "\t",'<option>', $horaire ,'</option>',"\n";
-
-}
-echo '</select>',"\n";
 
 echo "<input type='submit' value='Choisir'></form>";
 
