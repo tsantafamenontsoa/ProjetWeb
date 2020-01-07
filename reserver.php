@@ -6,7 +6,7 @@
   $j = $_GET["jour"];
   $h = $_GET["horaire"];
   $monfichier = fopen('reservation.csv', 'a');
-  fwrite($monfichier,$l. ',' .$t .','. $j.',' .  $h);
+  fwrite($monfichier,$l. ',' .$t .','. $j.',' .  $h. '\n');
   fclose($monfichier);
   require "projet.php";
   ?>
