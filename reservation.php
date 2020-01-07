@@ -175,7 +175,7 @@ $horaires = array();
       #print_r($value);
       array_push($titres, $value["TitreSpectacle"]);
       array_push($horaires, $value["Heure"]);
-      array_push($jours, $value["jour"]);
+      array_push($jours, $value["Jour"]);
   }
 
 }
