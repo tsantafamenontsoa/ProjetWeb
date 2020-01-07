@@ -153,7 +153,7 @@
         <?php
 $lieu = (!empty($_GET['lieu']) ? $_GET['lieu'] : "Moulins");
         $list_lieu = array('Moulins' ,
-        'Monetay',
+        'Monétay',
         'Vichy',
         'Monteignet',
         'Veauce',
